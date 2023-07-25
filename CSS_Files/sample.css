@@ -28,6 +28,11 @@
     color:black;
 }
 
+::placeholder {
+    color: var(--black);
+    opacity: 1;
+  }
+
 html
 {
     font-size: 62.5%;
@@ -187,8 +192,8 @@ section
     justify-content: center;
     gap: 2.5rem;
     box-shadow: 1px 1px 14px 4px rgba(0,0,0,0.69);
--webkit-box-shadow: 1px 1px 14px 4px rgba(0,0,0,0.69);
--moz-box-shadow: 1px 1px 14px 4px rgba(0,0,0,0.69);
+    -webkit-box-shadow: 1px 1px 14px 4px rgba(0,0,0,0.69);
+    -moz-box-shadow: 1px 1px 14px 4px rgba(0,0,0,0.69);
 }
 
 .count .box-container .box i
@@ -446,6 +451,7 @@ section
     -moz-box-shadow: 3px 3px 20px 2px rgba(0,0,0,0.75);
     padding:2.5rem;
     border-radius: 3rem;
+    background-color: var(--blue);
 }
 
 .contact .row form .box
@@ -454,9 +460,16 @@ section
     margin-top: 1rem;
     margin-bottom: 2rem;
     border-radius: .5rem;
-    background-color: var(--blue);
+    background-color: var(--white);
     font-size: 1.8rem;
     padding: 1.4rem;
+    /* From https://css.glass */
+
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px);
+border: 1px solid rgba(255, 255, 255, 0.34);
 }
 
 .contact .row form span
@@ -474,7 +487,7 @@ section
 .contact .row form .radio label
 {
     font-size: 1.6rem;
-    color: var(--grey);
+    color: var(--light-blue);
     margin-left: .5rem;
 }
 
@@ -485,7 +498,7 @@ section
 
 .contact .row form .radio #male:checked ~ label[for="male"]
 {
-    color: var(--blue);
+    color: var(--orange);
 }
 
 .contact .row form .radio #female
@@ -495,7 +508,7 @@ section
 
 .contact .row form .radio #female:checked ~ label[for="female"]
 {
-    color: var(--blue);
+    color: var(--orange);
 }
 
 .contact .row form .radio input
@@ -503,8 +516,9 @@ section
     appearance: none;
     height: 2rem;
     width: 2rem;
-    background-color: var(--white);
+    background-color: var(--darkblue);
     cursor: pointer;
+    border-radius: 5rem;
 }
 
 .contact .row form .radio input:checked
@@ -513,9 +527,13 @@ section
     border-radius: 5rem;
 }
 
+.formbtn{
+    background-color: var(--darkblue);
+}
+
 .footer
 {
-    background-color: var(--light-bg);
+    background-color: var(--darkblue);
     text-align: center;
 }
 
