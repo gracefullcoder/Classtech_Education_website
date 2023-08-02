@@ -65,7 +65,7 @@ section
     padding: 2rem;
 }
 
-/* .btn
+.btn
 {
     display: inline-block;
     margin-top: 1rem;
@@ -81,7 +81,7 @@ section
 {
     background-color: var(--white);
     color: var(--orange);
-} */
+}
 
 .header
 {

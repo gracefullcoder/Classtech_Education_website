@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     $(".courses-slider2").hide();
     $(document).on('click', "#btn", function () {
