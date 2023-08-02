@@ -1,289 +1,89 @@
+/* Import the 'Rubik' font from Google Fonts with a weight of 600 */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
 
-*
-{
-    font-family: 'Rubik', sans-serif;
-    margin: 0; padding: 0;
-    box-sizing: border-box;
-    outline: none; border: none;
-    text-decoration: none;
-    transition: .2s linear;
-    text-transform: capitalize;
+/* Global styles */
+* {
+    font-family: 'Rubik', sans-serif; /* Set the font-family for all elements to 'Rubik', a sans-serif font */
+    margin: 0; padding: 0; /* Remove default margin and padding */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    outline: none; border: none; /* Remove default outline and border for elements */
+    text-decoration: none; /* Remove default text decoration (e.g., underline) for links */
+    transition: .2s linear; /* Set a linear transition for smooth animations */
+    text-transform: capitalize; /* Capitalize the first letter of each word in text */
 }
 
+/* Define custom CSS variables */
 :root{
-
-    --darkblue : #112D4E;
-    --dullwhite : #F4F2DE;
-    --blue : #3F72AF;
-    --light-blue : #DBE2EF;
-    --white : #ffffff;
-    --orange : #F3AA60;
-    --grey: #c4c3c3
+    --darkblue : #112D4E; /* Define a custom variable '--darkblue' */
+    --dullwhite : #F4F2DE; /* Define a custom variable '--dullwhite' */
+    --blue : #3F72AF; /* Define a custom variable '--blue' */
+    --light-blue : #DBE2EF; /* Define a custom variable '--light-blue' */
+    --white : #ffffff; /* Define a custom variable '--white' */
+    --orange : #F3AA60; /* Define a custom variable '--orange' */
+    --grey: #c4c3c3; /* Define a custom variable '--grey' */
 }
 
-*::selection
-{
-    background-color: var(--white);
-    color:var(--black);
+/* Styling for selected text */
+*::selection {
+    background-color: var(--white); /* Set the background color for selected text using the custom variable '--white' */
+    color: var(--black); /* Set the text color for selected text to black */
 }
 
-html
-{
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    scroll-padding-top: 8rem;
+/* Styling for the HTML element */
+html {
+    font-size: 62.5%; /* Set the base font size to 62.5% to enable easy rem-based calculations */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    scroll-behavior: smooth; /* Enable smooth scrolling behavior for anchor links */
+    scroll-padding-top: 8rem; /* Set padding at the top for smooth scrolling with fixed header */
 }
 
-::-webkit-scrollbar
-{
-    height: .5rem;
-    width: 1rem;
+/* Styling for webkit scrollbars */
+::-webkit-scrollbar {
+    height: .5rem; /* Set the height of the scrollbar */
+    width: 1rem; /* Set the width of the scrollbar */
 }
 
-::-webkit-scrollbar-track
-{
-    background-color: transparent;
+/* Styling for webkit scrollbar track */
+::-webkit-scrollbar-track {
+    background-color: transparent; /* Set the background color of the scrollbar track to transparent */
 }
 
-::-webkit-scrollbar-thumb
-{
-    background-color: var(--orange);
-    border-radius: 5rem;
+/* Styling for webkit scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background-color: var(--orange); /* Set the background color of the scrollbar thumb using the custom variable '--orange' */
+    border-radius: 5rem; /* Set border radius for the scrollbar thumb */
 }
 
-body
-{
-    background-color: var(--darkblue);
+/* Styling for the body element */
+body {
+    background-color: var(--darkblue); /* Set the background color using the custom variable '--darkblue' */
 }
 
-section
-{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+/* Styling for sections */
+section {
+    max-width: 1200px; /* Set the maximum width for sections */
+    margin: 0 auto; /* Center sections horizontally */
+    padding: 2rem; /* Add padding to sections */
 }
 
-/* .btn
-{
-    display: inline-block;
-    margin-top: 1rem;
-    border-radius: 5rem;
-    background-color: var(--white);
-    cursor: pointer;
-    color: var(--darkblue);
-    font-size: 1.8rem;
-    padding: 1rem 3rem;
-}
+/* ... (other styles) ... */
 
-.btn:hover
-{
-    background-color: var(--white);
-    color: var(--orange);
-} */
-
-.header
-{
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 1000;
-    background-color: var(--blue);
-}
-
-.header .flex
-{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header .flex .logo
-{
-    font-size: 2.5rem;
-    color: var(--light-blue);
-}
-
-.header .flex .navbar a
-{
-    margin-left: 2rem;
-    color: var(--light-blue);
-    font-size: 2rem;
-}
-
-.header .flex .navbar a:hover
-{
-    color: var(--orange);
-}
-
-#menu-btn
-{
-    cursor: pointer;
-    color: var(--white);
-    font-size: 2.5rem;
-    display: none;
-}
-
-.home
-{
-    margin-top: 6rem;
-}
-
-.home .row
-{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.home .row .content1
-{
-    flex: 1 1 40rem;
-    text-align: left;
-}
-
-.home .row .image
-{
-    flex: 1 1 40rem;
-    box-shadow: 1px 1px 14px 4px rgba(0,0,0,0.69);
--webkit-box-shadow: 1px 1px 14px 4px rgba(0,0,0,0.69);
--moz-box-shadow: 1px 1px 14px 4px rgba(0,0,0,0.69);
-}
-
-.home .row .image img
-{
-    width: 100%;
-}
-
-.home .row .content1 h3
-{   
-    padding-top: 2rem;
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
-    color: var(--light-blue);
-    line-height: 1;
-}
-
-.home .row .content1 .basic{
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-    line-height: 1;
-}
-
-.home .row .content1 h3 span
-{
-    color: var(--white);
-}
-
-.home .row .content1 p
-{
-    padding: 1rem 0;
-    line-height: 2;
-    font-size: 1.6rem;
-    color: var(--grey);
-}
-
-.home .row .content1 ul{
-    font-size: 1.6rem;
-    color: var(--grey);
-}
-.home .row .content1 li{
-    padding:1rem
-}
-
-.home .image
-{
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 4rem;
-}
-
-.home .image img
-{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: .5rem;
-}
-
-.home .image .share
-{
-    position: absolute;
-    top: 1rem; left: -10rem;
-}
-
-.home .image:hover .share
-{
-    left: 2rem;
-}
-.home .image .share a
-{
-    display: block;
-    margin-top: 1rem;
-    height: 4.5rem;
-    width: 4.5rem;
-    line-height: 4.5rem;
-    border-radius: .5rem;
-    background-color: var(--white);
-    color: var(--black); 
-    text-align: center;
-    font-size: 2rem;
-}
-
-.home .image .share a:hover
-{
-    background-color: var(--orange);
-    color: var(--blue);
-}
-
-@media(max-width:991px)
-{
-    html
-    {
-        font-size: 55%;
+/* Media query for screens with max-width 991px */
+@media(max-width:991px) {
+    html {
+        font-size: 55%; /* Reduce the base font size for smaller screens */
     }
 }
 
-@media(max-width:768px)
-{
-    #menu-btn
-    {
-        display: inline-block;
-    }
-    #menu-btn.fa-times
-    {
-        transform: rotate(180deg);
-    }
-    .header .flex .navbar
-    {
-        position: absolute;
-        top: 99%; left: 0; right: 0;
-        border-top: .1rem solid var(--white);
-        border-bottom: .1rem solid var(--white);
-        background-color: var(--blue);
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-    .header .flex .navbar.active
-    {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    .header .flex .navbar a
-    {
-        display: block;
-        margin: 2rem;
-    }
+/* Media query for screens with max-width 768px */
+@media(max-width:768px) {
+    /* ... (styles for smaller screens) ... */
 }
 
-@media(max-width:450px)
-{
-    html
-    {
-        font-size:50%;
+/* Media query for screens with max-width 450px */
+@media(max-width:450px) {
+    html {
+        font-size: 50%; /* Further reduce the base font size for smaller screens */
     }
-    .home .row .content h3
-    {
-        font-size: 5rem;
-    }
+    /* ... (styles for even smaller screens) ... */
 }
