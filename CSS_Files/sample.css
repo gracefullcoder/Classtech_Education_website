@@ -156,6 +156,58 @@ section
     flex: 1 1 40rem;
 }
 
+
+.learnwords{
+    margin-top: 3.2rem;
+    margin-bottom: 1.28rem;
+}
+
+.coursesmoving{
+    margin-bottom: 0.16rem;
+}
+
+.tagline{
+    margin-top: 3.2rem;
+}
+
+.signupbutton{
+    margin-top: 3.2rem;
+}
+
+.words__word1{
+    color: var(--white);
+    font-size: 5.6rem;
+    font-family: var(--lato);
+}
+
+.words__word2 {
+    font-size: 5.6rem;
+    color:var(--orange);
+    font-family: var(--lato);
+}
+
+.words__word3{
+    color: var(--white);
+    font-size: 2.8rem;
+    margin: 0rem;
+    font-family: var(--rubik);
+}
+
+.words__word4 {
+    color: var(--white);
+    font-size: 2.4rem;
+    margin: 0rem;
+    font-family: var(--scp);
+}
+
+.words__word5 {
+    color:var(--orange);
+    font-size: 2.4rem;
+    margin: 0rem;
+    font-family: var(--scp);
+}
+
+
 .home .row .image img
 {
     width: 100%;
