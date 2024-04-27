@@ -36,3 +36,20 @@ var swiper = new Swiper(".teachers-slider", {
         },
     },
 });
+
+
+for(var i = 0 ; i < document.querySelectorAll(".slide").length ; i++) {
+    var index = i;
+    
+    document.querySelectorAll(".slide")[i].addEventListener("click",function(){
+        addAnimation(index);
+    });
+}
+
+function addAnimation(index) {
+    console.log(index);
+    document.querySelectorAll(".slide")["index"].classList.add("hover");
+}
+
+
+

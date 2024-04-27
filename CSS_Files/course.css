@@ -324,6 +324,61 @@ section
     text-decoration: line-through;
     padding-left: .5rem;
 }
+
+.courses .bioslide
+{
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 4rem;
+    width: 37rem;
+}
+
+.courses .bioslide img
+{
+    height: 25rem;
+    width: 100%;
+}
+
+.courses .bioslide h3
+{
+    margin: 1.5rem 0;
+    font-size: 2rem;
+    color: var(--white);
+    text-align: left;
+}
+
+.courses .bioslide p
+{
+    line-height: 2;
+    font-size: 1.6rem;
+    color: var(--light-while);
+    text-align: left;
+}
+
+.courses .bioslide hr
+{
+    border: 1px solid grey;
+}
+
+.courses .bioslide h1
+{
+    line-height: 2;
+    font-size: 2.6rem;
+    color: var(--light-while);
+    text-align: left;
+}
+
+.courses .bioslide del
+{
+    line-height: 2;
+    font-size: 1.5rem;
+    color: var(--light-while);
+    text-decoration: line-through;
+    padding-left: .5rem;
+}
+
 .courses .box button
 {
     display: inline-block;
@@ -471,6 +526,12 @@ section
         display: block;
         margin: 2rem;
     }
+}
+
+.hover{
+    box-shadow: 1px 1px 14px 4px rgba(0,0,0,0.69);
+    -webkit-box-shadow: 1px 1px 14px 4px rgba(0,0,0,0.69);
+    -moz-box-shadow: 1px 1px 14px 4px rgba(0,0,0,0.69);
 }
 
 @media(max-width:450px)
